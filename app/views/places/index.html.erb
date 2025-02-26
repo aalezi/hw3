@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Log</title>
+</head>
+<body>
+  <h1>A list of places that I have been</h1>
+
+  <ul>
+    <% @places.each do |place| %>
+      <li>
+        <a href="/places/<%= place["id"] %>"><%= place["name"] %></a>
+      </li>
+    <% end %>
+  </ul>
+
+  <p><a href="/places/new">New Place</a></p>
+</body>
+</html>
